@@ -1,0 +1,19 @@
+#!/bin/bash
+
+#instal·lació del repositori perfil-blau
+echo deb http://ppa.launchpad.net/ubuntuthirdparty/linkat-18.04/ubuntu bionic main >>/etc/apt/sources.list
+echo deb-src http://ppa.launchpad.net/ubuntuthirdparty/linkat-18.04/ubuntu bionic main >>/etc/apt/sources.list
+add-apt-repository ppa:ubuntuthirdparty/linkat-18.04
+apt update
+
+#instal·lació dependències
+apt install wget playonlinux
+wget http://download-linkat.xtec.cat/distribution/linkat-edu-14.04/main/linkat-online-apps_14.04-0.2_all.deb && dpkg -i linkat-online-apps_14.04-0.2_all.deb
+
+#instal·lació de del perfil-blau
+apt -y install gnome-session-flashback && apt -y install linkat-perfil-blau
+
+#configuració de l'usuari blau
+usermod -l Profe blau
+usermod -md /home/profe Profe
+passwd Profe
