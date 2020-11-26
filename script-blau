@@ -10,7 +10,7 @@ apt update
 apt -y install wget playonlinux
 wget http://download-linkat.xtec.cat/distribution/linkat-edu-14.04/main/linkat-online-apps_14.04-0.2_all.deb && dpkg -i linkat-online-apps_14.04-0.2_all.deb
 
-#instal·lació de del perfil-blau
+#instal·lació del perfil-blau
 apt -y install gnome-session-flashback && apt -y install linkat-perfil-blau
 
 #configuració de l'usuari blau
